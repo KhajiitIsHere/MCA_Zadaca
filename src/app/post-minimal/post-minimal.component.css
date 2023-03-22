@@ -1,0 +1,27 @@
+.w-max-content {
+  max-width: 380px;
+  min-width: 10px;
+}
+
+.trunctuate {
+  inline-size: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.containing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  width: 70%;
+}

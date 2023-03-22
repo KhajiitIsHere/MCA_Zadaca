@@ -1,0 +1,17 @@
+<div class="card containing">
+  <div>
+    <img [src]="post.url" width="500" />
+  </div>
+  <div class="p-2">
+     <p style="height: 3em; overflow: visible; margin-bottom: 1em;">{{post.title}}</p>
+     <div class="d-flex justify-content-between">
+      <div>
+        <button [routerLink]="['/albums']" class="btn btn-secondary me-3">Back</button>
+        <button (click)="editHandler()" class="btn btn-light">Edit</button>
+      </div>
+      <div>
+        <button [routerLink]="['/albums', post.albumId, 'edit', 'new']" class="btn btn-success">Add post</button>
+      </div>
+    </div>
+  </div>
+</div>

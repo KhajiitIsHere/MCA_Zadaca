@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.arrow {
+  padding: 2px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background-color:darkgray;
+}
+
+.arrow-disabeled,
+.arrow-disabeled:hover {
+  background-color: lightgray;
+  cursor: default;
+}
+
+.posts {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

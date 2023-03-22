@@ -1,0 +1,15 @@
+<div>
+  <div class="display-5 mb-4">
+    {{album.title}}
+  </div>
+  <div>{{currentIdx + 1}} / {{posts.length}} Posts</div>
+  <div class="posts" style="border: 1px solid lightgray; padding: 1em 0;">
+    <div class="arrow" (click)="decreaseIndex()" [ngClass]="{'arrow-disabeled': currentIdx == 0}">
+      <img src="/assets/images/left.png" width="30" />
+    </div>
+    <app-post-details [post]="posts[currentIdx]" (editPost)="editPostHandler()"></app-post-details>
+    <div class="arrow" (click)="increaseIndex()" [ngClass]="{'arrow-disabeled': currentIdx == posts.length - 1}">
+      <img src="/assets/images/right.png" width="30" />
+    </div>
+  </div>
+</div>

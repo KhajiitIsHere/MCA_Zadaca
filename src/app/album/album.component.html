@@ -1,0 +1,18 @@
+<div class="card containing">
+  <div class="heading">
+    <div class="display-4 title" [ngClass]="{'title-trunc': isViewingPosts}">{{album.title}}</div>
+    <div *ngIf="isViewingPosts" class="d-inline-block">{{currentIdx + 1}} / {{posts.length}} Posts</div>
+  </div>
+
+  <div *ngIf="!isViewingPosts">
+    <button [disabled]="loading" class="btn btn-secondary" (click)="toggleViewPosts()">View Photos</button>
+  </div>
+
+  <div class="posts" *ngIf="isViewingPosts">
+    <div class="arrow" [ngClass]="{'arrow-disabeled': currentIdx == 0}" (click)="decreaseIndex()"><img src="/assets/images/left.png" width="30" /></div>
+    <div class="posts-posts">
+      <app-post-minimal (detailsClicked)="detailsHandler()" [post]="posts[currentIdx]"></app-post-minimal>
+    </div>
+    <div class="arrow" [ngClass]="{'arrow-disabeled': currentIdx == posts.length - 1}" (click)="increaseIndex()"><img src="/assets/images/right.png" width="30" /></div>
+  </div>
+</div>
